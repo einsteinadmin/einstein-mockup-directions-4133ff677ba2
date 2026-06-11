@@ -483,6 +483,142 @@
 
   .deck-link a:hover { text-decoration: underline; }
 
+  /* ── REACTION LAYER (6/11) ── */
+  .w-block { position: relative; }
+  .blk-like {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--card-border);
+    background: rgba(17,17,17,0.65);
+    color: var(--text-4);
+    font-size: 0.9rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .blk-like:hover { border-color: var(--orange); color: var(--orange); }
+  .blk-like.liked { background: var(--orange); border-color: var(--orange); color: #111; }
+  .blk-note {
+    display: none;
+    width: 100%;
+    margin-top: 12px;
+    background: rgba(239,139,34,0.08);
+    border: 1px solid rgba(239,139,34,0.35);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+  .blk-note::placeholder { color: var(--text-3); }
+  .blk-note:focus { outline: none; border-color: var(--orange); }
+  .w-block.liked-block { border-color: rgba(239,139,34,0.55); }
+  .w-block.liked-block .blk-note { display: block; }
+  .concept-note-wrap { margin-top: 36px; }
+  .concept-note-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+  .concept-note {
+    width: 100%;
+    min-height: 64px;
+    background: rgba(239,139,34,0.05);
+    border: 1px solid rgba(239,139,34,0.3);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 12px 16px;
+    resize: vertical;
+  }
+  .concept-note::placeholder { color: var(--text-3); }
+  .concept-note:focus { outline: none; border-color: var(--orange); }
+  .concept-hide {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-3);
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 14px;
+    transition: all 0.2s;
+  }
+  .concept-hide:hover { border-color: #ff8a7a; color: #ff8a7a; }
+  .concept.is-hidden > *:not(.concept-tag):not(h2):not(.concept-restore-bar) { display: none; }
+  .concept.is-hidden h2 { opacity: 0.35; text-decoration: line-through; }
+  .concept-restore-bar { display: none; margin-top: 14px; }
+  .concept.is-hidden .concept-restore-bar { display: block; }
+  .concept-restore-bar button {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-2);
+    font-family: inherit;
+    font-size: 0.78rem;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .concept-restore-bar button:hover { border-color: #4ecdc4; color: #4ecdc4; }
+  .nav-pill.is-hidden { text-decoration: line-through; opacity: 0.45; }
+  .rx-bar {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 80;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #1a1a1a;
+    border: 1px solid var(--card-border);
+    border-radius: 100px;
+    padding: 8px 10px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+  }
+  .rx-bar .rx-count { font-size: 0.78rem; color: var(--text-2); padding: 0 6px 0 10px; white-space: nowrap; }
+  .rx-bar .rx-count b { color: var(--orange); }
+  .rx-bar button {
+    font-family: inherit;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 16px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: 40px;
+    background: var(--orange);
+    color: #111;
+  }
+  .rx-bar button:hover { opacity: 0.85; }
+  .rx-caveat { font-size: 0.68rem; color: var(--text-4); }
+  .foundation-banner {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding: 0 60px;
+  }
+  .foundation-banner .inner {
+    background: rgba(239,139,34,0.07);
+    border: 1px solid rgba(239,139,34,0.3);
+    border-radius: 12px;
+    padding: 18px 24px;
+    font-size: 0.9rem;
+    color: var(--text-2);
+  }
+  .foundation-banner b { color: var(--orange); }
+  @media (max-width: 900px) { .foundation-banner { padding: 0 28px; } }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .intro, .concept, .deck-link, .nav-bar { padding-left: 28px; padding-right: 28px; }
@@ -515,6 +651,10 @@
   <a class="nav-pill" href="#c4">04 · The Smart Move System</a>
   <a class="nav-pill" href="#c5">05 · Editorial Hospitality</a>
 </nav>
+
+<div class="foundation-banner">
+  <div class="inner"><b>Design foundation — locked (6/11):</b> the redesigned <b>quote form</b> is the only part of the site already redesigned, and it IS the design direction — its palette, type system, shape, and feel are hard-baked into every concept here and every mockup downstream. The rest of the site catches up to the form; nothing re-invents it. <span style="color:var(--text-3);">React inline below: ♥ any block you like (a "use it for…" note appears — steal it for any version or any page), drop concept-level notes, hide concepts that are out, and Export decisions when done. Reactions save in this browser.</span></div>
+</div>
 
 <!-- ═════════════════════════════════════════════ -->
 <!-- CONCEPT 01 · ORIGIN STORY FIRST -->
@@ -1277,6 +1417,175 @@
   <p>Sister doc · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/">Brand-story deck</a> · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html">Research deep-dive</a></p>
   <p style="margin-top:12px; color: var(--text-4);">Prepared by Albert · May 2026 · Einstein Moving Company</p>
 </section>
+
+
+<script>
+(function () {
+  var KEY = 'einstein-mockup-reactions-v1';
+  var state = { blocks: {}, conceptNotes: {}, hidden: [] };
+  try {
+    var l = JSON.parse(localStorage.getItem(KEY) || '{}');
+    if (l && typeof l === 'object') {
+      if (l.blocks && typeof l.blocks === 'object') state.blocks = l.blocks;
+      if (l.conceptNotes && typeof l.conceptNotes === 'object') state.conceptNotes = l.conceptNotes;
+      if (Array.isArray(l.hidden)) state.hidden = l.hidden;
+    }
+  } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+  var concepts = Array.prototype.slice.call(document.querySelectorAll('section.concept'));
+
+  function conceptName(sec) {
+    var h = sec.querySelector('h2');
+    return h ? h.textContent.trim() : sec.id;
+  }
+  function blockLabel(blk) {
+    var lab = blk.querySelector('.w-label');
+    if (lab && lab.textContent.trim()) return lab.textContent.trim();
+    var hl = blk.querySelector('.w-headline');
+    if (hl && hl.textContent.trim()) return hl.textContent.trim().slice(0, 60);
+    return 'block';
+  }
+
+  concepts.forEach(function (sec) {
+    var cid = sec.id;
+
+    // Block-level ♥ pins
+    Array.prototype.forEach.call(sec.querySelectorAll('.wire > .w-block'), function (blk, i) {
+      var bid = cid + '::' + i;
+      var btn = document.createElement('button');
+      btn.className = 'blk-like';
+      btn.type = 'button';
+      btn.textContent = '♥';
+      btn.title = 'I like this component';
+      btn.setAttribute('aria-label', 'Like ' + blockLabel(blk));
+      var note = document.createElement('input');
+      note.className = 'blk-note';
+      note.type = 'text';
+      note.placeholder = 'Use it for… (any version, any page — e.g. "steal for About page")';
+      note.setAttribute('aria-label', 'Where to use ' + blockLabel(blk));
+      function sync() {
+        var st = state.blocks[bid];
+        var liked = !!(st && st.liked);
+        btn.classList.toggle('liked', liked);
+        blk.classList.toggle('liked-block', liked);
+        note.value = (st && st.note) || '';
+      }
+      btn.addEventListener('click', function () {
+        var st = state.blocks[bid] || {};
+        if (st.liked) { delete state.blocks[bid]; }
+        else { state.blocks[bid] = { liked: true, note: st.note || '', label: blockLabel(blk) }; }
+        save(); sync(); renderBar();
+        if (state.blocks[bid]) note.focus();
+      });
+      note.addEventListener('input', function () {
+        if (!state.blocks[bid]) return;
+        state.blocks[bid].note = note.value;
+        save();
+      });
+      blk.appendChild(note);
+      blk.appendChild(btn);
+      sync();
+    });
+
+    // Concept-level notes + hide
+    var wrap = document.createElement('div');
+    wrap.className = 'concept-note-wrap';
+    var lab = document.createElement('div');
+    lab.className = 'concept-note-label';
+    lab.textContent = '♥ My take on this concept';
+    var ta = document.createElement('textarea');
+    ta.className = 'concept-note';
+    ta.placeholder = 'Overall reaction — what works, what to blend into other concepts, what to drop…';
+    ta.setAttribute('aria-label', 'Notes for ' + conceptName(sec));
+    ta.value = state.conceptNotes[cid] || '';
+    ta.addEventListener('input', function () {
+      state.conceptNotes[cid] = ta.value;
+      save(); renderBar();
+    });
+    var hide = document.createElement('button');
+    hide.className = 'concept-hide';
+    hide.type = 'button';
+    hide.textContent = '✕ Hide this concept — not pursuing';
+    hide.addEventListener('click', function () {
+      if (state.hidden.indexOf(cid) === -1) state.hidden.push(cid);
+      save(); render();
+    });
+    wrap.appendChild(lab);
+    wrap.appendChild(ta);
+    wrap.appendChild(hide);
+    sec.appendChild(wrap);
+
+    var restoreBar = document.createElement('div');
+    restoreBar.className = 'concept-restore-bar';
+    var rb = document.createElement('button');
+    rb.type = 'button';
+    rb.textContent = '↩ Restore this concept';
+    rb.addEventListener('click', function () {
+      state.hidden = state.hidden.filter(function (x) { return x !== cid; });
+      save(); render();
+    });
+    restoreBar.appendChild(rb);
+    sec.appendChild(restoreBar);
+  });
+
+  // Floating bar
+  var bar = document.createElement('div');
+  bar.className = 'rx-bar';
+  bar.innerHTML = '<span class="rx-count"><b id="rxPicks">0</b> picks <span class="rx-caveat">· saves in this browser</span></span><button id="rxExport" type="button">📋 Export decisions</button>';
+  document.body.appendChild(bar);
+
+  function renderBar() {
+    var n = Object.keys(state.blocks).length;
+    Object.keys(state.conceptNotes).forEach(function (k) { if ((state.conceptNotes[k] || '').trim()) n++; });
+    document.getElementById('rxPicks').textContent = n;
+  }
+
+  function render() {
+    concepts.forEach(function (sec) {
+      var hidden = state.hidden.indexOf(sec.id) !== -1;
+      sec.classList.toggle('is-hidden', hidden);
+      var pill = document.querySelector('.nav-pill[href="#' + sec.id + '"]');
+      if (pill) pill.classList.toggle('is-hidden', hidden);
+    });
+    renderBar();
+  }
+
+  bar.querySelector('#rxExport').addEventListener('click', function () {
+    var lines = ['# Mockup Directions — Cameron\u2019s Reactions \u2014 ' + new Date().toLocaleDateString(), ''];
+    concepts.forEach(function (sec) {
+      var cid = sec.id;
+      var likes = Object.keys(state.blocks).filter(function (k) { return k.indexOf(cid + '::') === 0; });
+      var note = (state.conceptNotes[cid] || '').trim();
+      var hidden = state.hidden.indexOf(cid) !== -1;
+      if (!likes.length && !note && !hidden) return;
+      lines.push('## ' + conceptName(sec) + (hidden ? ' \u2014 HIDDEN (not pursuing)' : ''));
+      likes.forEach(function (k) {
+        var b = state.blocks[k];
+        lines.push('- \u2665 ' + (b.label || 'block') + (b.note && b.note.trim() ? ' \u2014 ' + b.note.trim() : ''));
+      });
+      if (note) { lines.push(''); note.split('\n').forEach(function (ln) { lines.push('> ' + ln); }); }
+      lines.push('');
+    });
+    if (lines.length <= 2) lines.push('_No reactions yet \u2014 \u2665 a block or drop a concept note._');
+    var md = lines.join('\n');
+    var blob = new Blob([md], { type: 'text/markdown' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'mockup-reactions.md';
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    var btn = bar.querySelector('#rxExport');
+    var old = btn.textContent;
+    btn.textContent = '\u2713 Exported';
+    setTimeout(function () { btn.textContent = old; }, 1600);
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(md).catch(function () {});
+  });
+
+  render();
+})();
+</script>
 
 </body>
 </html>
