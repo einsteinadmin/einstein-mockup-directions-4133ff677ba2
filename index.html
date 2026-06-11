@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
-<title>Internal — Mockup Directions</title>
+<title>Internal — Mockup Directions v2</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -630,798 +630,402 @@
     .w-nav .links { display: none; }
   }
 </style>
+
+<style>
+  .tab-bar { max-width: 1100px; margin: 0 auto; padding: 28px 60px 0; display: flex; gap: 10px; }
+  .tab { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 10px 20px; border-radius: 10px 10px 0 0; text-decoration: none; border: 1px solid var(--card-border); border-bottom: none; color: var(--text-3); }
+  .tab.active { background: rgba(239,139,34,0.1); border-color: rgba(239,139,34,0.4); color: var(--orange); }
+  .tab:not(.active):hover { color: var(--text); }
+  .llm-row { margin-top: 28px; padding: 18px 24px; background: rgba(78,205,196,0.05); border-left: 2px solid #4ecdc4; border-radius: 8px; }
+  .llm-row .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ecdc4; margin-bottom: 8px; }
+  .llm-row p { font-size: 0.88rem; color: var(--text-2); }
+  .fdn-row { margin-top: 14px; padding: 18px 24px; background: rgba(239,139,34,0.05); border-left: 2px solid var(--orange); border-radius: 8px; }
+  .fdn-row .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+  .fdn-row p { font-size: 0.88rem; color: var(--text-2); }
+  @media (max-width: 900px) { .tab-bar { padding: 20px 28px 0; } }
+</style>
 </head>
 <body>
 
-<!-- ─────────────────────────────────────────── -->
-<!-- INTRO -->
-<!-- ─────────────────────────────────────────── -->
+<div class="tab-bar">
+  <a class="tab active" href="#">MOCKUP DIRECTIONS · V2 (CURRENT)</a>
+  <a class="tab" href="v1.html">V1 · MAY 2026 (SUPERSEDED)</a>
+</div>
+
 <section class="intro">
-  <div class="eyebrow">Q2 2026 · Website Redesign</div>
-  <h1>Five directional concepts for the new einsteinmoving.com.</h1>
-  <p class="lede">Sister doc to the <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/" style="color:var(--orange);text-decoration:none;">brand-story deck</a>. The deck makes the case for <em>why</em> we redesign. This doc shows five distinct ways the homepage could actually sit on the screen. Each is buildable on WordPress with a new FSE block theme — no Webflow-only tricks.</p>
-  <p class="lede">The point is not to pick a winner today. The point is to walk into the Kickpoint SOW conversation with a sharper brief, so KP scopes execution, not exploration.</p>
-  <p class="meta">Prepared by Albert · May 2026 · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html">Source research →</a></p>
+  <div class="eyebrow">Q2 2026 · Website Redesign · v2 — June 11</div>
+  <h1>Four blended concepts for the new einsteinmoving.com.</h1>
+  <p class="lede">A fresh pass with everything v1 didn't have: Cameron's curated inspiration picks (<a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#steer" style="color:var(--orange);text-decoration:none;">the Steer</a>), the 6/11 KP direction feedback (blend origin + proof + local; Editorial Hospitality dropped), Elizabeth's LLM question framework, and the quote-form design foundation hard-baked. v1's five single-note concepts are <a href="v1.html" style="color:var(--orange);text-decoration:none;">preserved on the v1 tab</a> — these four are deliberate blends. The plan: react here, pick 3 finalists, build them full-fidelity with real copy.</p>
+  <p class="meta">Prepared by Albert · June 11, 2026 · Inputs: Cameron's inspiration picks · KP meeting 6/11 · Brand Kit · live-site copy pull · LLM-readability research · scroll-journey research</p>
 </section>
 
 <nav class="nav-bar">
-  <a class="nav-pill" href="#c1">01 · Origin Story First</a>
-  <a class="nav-pill" href="#c2">02 · Proof Wall</a>
-  <a class="nav-pill" href="#c3">03 · Local-First</a>
-  <a class="nav-pill" href="#c4">04 · The Smart Move System</a>
-  <a class="nav-pill" href="#c5">05 · Editorial Hospitality</a>
+  <a class="nav-pill" href="#v2a">01 · The Smart Front Door</a>
+  <a class="nav-pill" href="#v2b">02 · The Mover Journey</a>
+  <a class="nav-pill" href="#v2c">03 · Hometown Proof</a>
+  <a class="nav-pill" href="#v2d">04 · The Working Quote</a>
 </nav>
 
 <div class="foundation-banner">
-  <div class="inner"><b>Design foundation — locked (6/11):</b> the redesigned <b>quote form</b> is the only part of the site already redesigned, and it IS the design direction — its palette, type system, shape, and feel are hard-baked into every concept here and every mockup downstream. The rest of the site catches up to the form; nothing re-invents it. <span style="color:var(--text-3);">React inline below: ♥ any block you like (a "use it for…" note appears — steal it for any version or any page), drop concept-level notes, hide concepts that are out, and Export decisions when done. Reactions save in this browser.</span></div>
+  <div class="inner"><b>Hard-baked into all four:</b> the redesigned <b>quote form is the design foundation</b> — its palette (orange = personality, blue = action), Roboto + Bebas type system, rounded warmth, and trust-badge idiom are the visual law; nothing here re-invents it. Every concept answers Elizabeth's LLM questions (what you do · who you are · where you're located · how you price) <b>within the first two sections</b>, in real server-rendered HTML. Video = the existing crew hero reel (no concept depends on an origin film — none exists). Brand story is front, <b>not center</b>. ♥ blocks you like (steal them for any version or any page), drop concept notes, hide what's out, Export decisions.</div>
 </div>
 
-<!-- ═════════════════════════════════════════════ -->
-<!-- CONCEPT 01 · ORIGIN STORY FIRST -->
-<!-- ═════════════════════════════════════════════ -->
-<section class="concept" id="c1">
-  <div class="concept-tag">CONCEPT 01</div>
-  <h2>Origin Story First</h2>
-  <p class="thesis">Lead with the founder myth. The quote comes after you've already fallen for them.</p>
+<!-- ═════════ V2 CONCEPT 01 · THE SMART FRONT DOOR ═════════ -->
+<section class="concept" id="v2a">
+  <div class="concept-tag">V2 · CONCEPT 01</div>
+  <h2>The Smart Front Door</h2>
+  <p class="thesis">Walk in and everything a human (or an LLM) needs is at the desk: what we do, who we are, where we are, how we price — answered in two sections, with the wit doing the welcoming. The conventional one, executed perfectly.</p>
 
   <div class="wire-shell">
-    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Origin Story First</span></div>
+    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Smart Front Door</span></div>
     <div class="wire">
-
       <div class="w-nav">
         <span class="logo">EINSTEIN</span>
-        <span class="links"><span>Services</span><span>Locations</span><span>Reviews</span><span>About</span></span>
-        <span class="cta">Get Quote</span>
+        <span class="links"><span>Services</span><span>Pricing</span><span>Locations</span><span>Reviews</span></span>
+        <span class="cta">Book Your Move</span>
       </div>
-
       <div class="w-block w-hero w-dark">
-        <span class="scroll-marker">SCROLL · 0</span>
-        <div class="w-label">Hero — full-bleed video</div>
-        <div class="w-img video tall">60-SEC ORIGIN FILM · KINDERGARTEN → ONE TRUCK → TEN BRANCHES</div>
-        <div class="w-headline big" style="margin-top:18px;">Two best friends. One truck. A really, really ridiculously good idea.</div>
-        <div class="w-body">Cameron and Paul met in kindergarten. They started Einstein with one truck. 22 years later they've got 75 of them — and 8,100+ reviews at 4.9 stars to show for it.</div>
-        <div class="w-button-row"><span class="w-btn">Tell us about your move →</span><span class="w-btn ghost">Watch the full story (2 min)</span></div>
+        <span class="scroll-marker">SCROLL · 0 — answers Q1/Q7/Q9</span>
+        <div class="w-label">Hero — existing crew reel, one promise, conversational CTA</div>
+        <div class="w-row w-row-2">
+          <div>
+            <div class="w-headline big">Local moving across Texas + Tampa. Smart, insured, and actually on time.</div>
+            <div class="w-body">Real crew footage (the reel we already have). The H1 literally states what we do and where — the LLM's first read and the customer's first read are the same sentence. Subline: "Background-checked W-2 crews. Everything included in one honest hourly rate."</div>
+            <div class="w-button-row"><span class="w-btn">See my price →</span><span class="w-btn ghost">Watch us work (0:47)</span></div>
+          </div>
+          <div class="w-img video tall">EXISTING CREW HERO REEL</div>
+        </div>
       </div>
-
+      <div class="w-block w-orange">
+        <span class="scroll-marker">SCROLL · 1 — answers Q2/Q4/Q6</span>
+        <div class="w-label">The front desk — trust band + plain answers, one reusable block</div>
+        <div class="w-row w-row-3">
+          <div><div class="w-stat">4.9★</div><div class="w-stat-label">8,100+ reviews</div></div>
+          <div><div class="w-stat">$0</div><div class="w-stat-label">Hidden fees — one all-inclusive hourly rate</div></div>
+          <div><div class="w-stat">10</div><div class="w-stat-label">Branches · TX + Tampa FL</div></div>
+        </div>
+        <div class="w-body" style="margin-top:14px;">One visible sentence each: how pricing works (hourly, everything included, link to the full pricing page), where we serve (the 10 branches as real text links), and the proof line. This block is THE reusable trust band — every page type gets it.</div>
+      </div>
       <div class="w-block">
-        <span class="scroll-marker">SCROLL · 1</span>
-        <div class="w-label">Proof bar — sticky on desktop</div>
+        <span class="scroll-marker">SCROLL · 2</span>
+        <div class="w-label">The worry list — objection cards in customer voice</div>
+        <div class="w-row w-row-3">
+          <div class="w-block"><div class="w-label">"Am I going to get ripped off?"</div><div class="w-body">Our rate is the whole cost. Theirs is just where it starts.</div></div>
+          <div class="w-block"><div class="w-label">"Who's showing up at my door?"</div><div class="w-body">Meet your movers before move day — photos + bios.</div></div>
+          <div class="w-block"><div class="w-label">"Will they show up on time?"</div><div class="w-body">On time or your move is discounted. The later, the bigger.</div></div>
+        </div>
+      </div>
+      <div class="w-block w-navy">
+        <span class="scroll-marker">SCROLL · 3</span>
+        <div class="w-label">Brand story band — front, not center</div>
+        <div class="w-row w-row-12">
+          <div class="w-img">ARCHIVE PHOTO · CAMERON + PAUL</div>
+          <div>
+            <div class="w-headline">Two best friends from kindergarten. One truck. 100,000+ moves.</div>
+            <div class="w-body">One band, not a chapter. Links to the full story on About (which inherits v1's Origin Story treatment). The wit lives here and in every microcopy moment around it.</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-block w-orange">
+        <span class="scroll-marker">SCROLL · 4</span>
+        <div class="w-label">Conversational quote invitation + reviews + footer FAQ</div>
+        <div class="w-body">"Tell us about your move" — the form invitation in the form's own visual language. Review excerpts as real HTML text. A 4-question FAQ block (the LLM chunk shape) closes every page.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="steals">
+    <div class="label">Steer lineage</div>
+    <p>Honey Homes proof stacking + Oscar's plain-language front desk + Mercury's friction-free CTA copy + the objection row Cameron ♥'d in v1's Proof Wall. The "wit everywhere" mandate (WGAC/Squatch/TUSHY sweep) carries the personality so the structure can stay calm.</p>
+  </div>
+
+  <div class="llm-row"><div class="label">LLM lens</div><p>Strongest of the four — Q1/Q7/Q9 in the hero, Q2/Q4/Q6 in section two, Q3/Q5 in the footer FAQ. Every answer is first-paint HTML. This is the concept Elizabeth's framework describes almost literally.</p></div>
+  <div class="fdn-row"><div class="label">Quote-form foundation</div><p>Trust-badge band = the form's badge idiom scaled up; CTA pair = form button styling; "Tell us about your move" = the form's voice. Zero new visual vocabulary.</p></div>
+
+  <div class="pvk">
+    <div class="pvk-cell preserve"><h4>Preserve</h4><ul><li>Existing crew hero reel (reuse, no new production)</li><li>"6 Reasons" copy → redistributed into worry list + pillars page</li><li>All proof numbers, scope-labeled</li></ul></div>
+    <div class="pvk-cell change"><h4>Change</h4><ul><li>Hero from generic headline → literal what/where statement + reel</li><li>Trust signals from scattered → one front-desk band</li><li>CTA copy "Book Your Move" → "See my price"</li></ul></div>
+    <div class="pvk-cell kill"><h4>Kill</h4><ul><li>Awards carousel</li><li>Blog teasers on home</li><li>Repeating CTA bands</li></ul></div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="detail scroll-moments"><h3>Three moments that carry it</h3><ul>
+      <li><strong>The H1 that answers the question.</strong> "Local moving across Texas + Tampa" — boring to a designer, gold to a customer at 11pm and to every answer engine.</li>
+      <li><strong>The front desk band.</strong> Three numbers + three sentences = the whole trust case in one screen.</li>
+      <li><strong>The worry list.</strong> Customer fears in customer voice — the brand's best copy pattern, promoted to structure.</li></ul></div>
+    <div class="detail risks"><h3>Risks</h3><ul>
+      <li><strong>Safest = least memorable.</strong> Without flawless craft this is "a very good normal website." The wit and photography have to carry the magic trick.</li>
+      <li><strong>Header-band overload</strong> if the front desk tries to say six things — hold it to three.</li></ul></div>
+  </div>
+</section>
+
+<!-- ═════════ V2 CONCEPT 02 · THE MOVER JOURNEY ═════════ -->
+<section class="concept" id="v2b">
+  <div class="concept-tag">V2 · CONCEPT 02</div>
+  <h2>The Mover Journey</h2>
+  <p class="thesis">Cameron's dream homepage: two movers carry a couch down the building as you scroll — every differentiator is a floor, every quip a landing — and the scroll ends with the couch in the truck, next to the quote. The motion showcase.</p>
+
+  <div class="wire-shell">
+    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Mover Journey</span></div>
+    <div class="wire">
+      <div class="w-nav">
+        <span class="logo">EINSTEIN</span>
+        <span class="links"><span>Services</span><span>Pricing</span><span>Locations</span><span>Reviews</span></span>
+        <span class="cta">Book Your Move</span>
+      </div>
+      <div class="w-block w-hero w-dark">
+        <span class="scroll-marker">SCROLL · 0 — static, LLM/LCP-safe</span>
+        <div class="w-label">Hero — answers first, journey teased</div>
+        <div class="w-row w-row-2">
+          <div>
+            <div class="w-headline big">Moving sucks. Watch us make it look easy.</div>
+            <div class="w-body">Static hero (real reel still + what/where line + proof band) so LCP and crawlers get a complete page before any animation initializes. A small "follow the couch ↓" tease starts the journey below the fold.</div>
+            <div class="w-button-row"><span class="w-btn">See my price →</span></div>
+          </div>
+          <div class="w-img tall">TOP FLOOR · APT 4B · MOVERS LIFT THE COUCH</div>
+        </div>
+      </div>
+      <div class="w-block w-orange">
+        <span class="scroll-marker">SCROLL · 1 — Floor 4: Smart Pricing</span>
+        <div class="w-label">Pin → scrub → release: movers descend past the pricing floor</div>
+        <div class="w-row w-row-12">
+          <div class="w-img tall">SPRITE MOVERS ON STAIRS · COUCH TILTED AT THE TURN</div>
+          <div>
+            <div class="w-headline">One honest hourly rate. Everything included.</div>
+            <div class="w-body">The copy panel slides past while the movers scrub down a flight. Quip bubble at the landing: "Careful — that's the no-hidden-fees floor."</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-block">
+        <span class="scroll-marker">SCROLL · 2 — Floor 3: Meet Your Movers</span>
+        <div class="w-label">The movers introduce themselves mid-carry</div>
+        <div class="w-body">Crew cards (photo, name, tenure) — and the sprite movers wave. Quip: "Look at that handsome guy." Each floor = one differentiator, one argument, never two.</div>
+      </div>
+      <div class="w-block w-navy">
+        <span class="scroll-marker">SCROLL · 3 — Floor 2: Proof + 60-day rest landing</span>
+        <div class="w-label">Awards landing — a STATIC rest floor</div>
         <div class="w-row w-row-4">
-          <div><div class="w-stat">8,100+</div><div class="w-stat-label">Reviews</div></div>
-          <div><div class="w-stat">4.9★</div><div class="w-stat-label">Avg rating</div></div>
+          <div><div class="w-stat">4.9★</div><div class="w-stat-label">8,100+ reviews</div></div>
           <div><div class="w-stat">55+</div><div class="w-stat-label">Awards</div></div>
           <div><div class="w-stat">7×</div><div class="w-stat-label">Inc. 5000</div></div>
+          <div><div class="w-stat">100K+</div><div class="w-stat-label">Moves</div></div>
         </div>
+        <div class="w-body" style="margin-top:12px;">Quip: "Well, that's pretty cool." Rest landings between animated flights — pacing belongs to the reader (The Boat's lesson).</div>
       </div>
-
       <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 2</span>
-        <div class="w-label">Chapter 01 — "The Kindergarten Part"</div>
-        <div class="w-row w-row-2">
-          <div>
-            <div class="w-headline">A long time ago, in a sandbox not so far away…</div>
-            <div class="w-body">Real photos. Real receipts. The first truck. The first crew. The first review. We're not building this story — we already lived it.</div>
-          </div>
-          <div class="w-img tall">CAMERON + PAUL · ARCHIVE PHOTO</div>
-        </div>
+        <span class="scroll-marker">SCROLL · 4 — Lobby + origin nod</span>
+        <div class="w-label">Ground floor — the kindergarten photo hangs in the lobby</div>
+        <div class="w-body">The origin story as a framed photo on the lobby wall the movers walk past ("front, not center" — literally). One line + link to About.</div>
       </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 3</span>
-        <div class="w-label">Chapter 02 — "The Tiny Math Elves"</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">PRICE-SHEET ANIMATION</div>
-          <div>
-            <div class="w-headline">No hidden fees. No PhD required.</div>
-            <div class="w-body">Other movers quote you a rate. We quote you the cost. The Smart Move System breaks down hours, materials, and travel up front — so the number on your quote is the number on your invoice.</div>
-            <span class="w-btn">See how pricing works →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-block w-navy">
-        <span class="scroll-marker">SCROLL · 4</span>
-        <div class="w-label">Chapter 03 — Crew (the people pages)</div>
-        <div class="w-row w-row-3">
-          <div class="w-img">MARCUS · 3 YRS</div>
-          <div class="w-img">DEVON · 5 YRS</div>
-          <div class="w-img">SARAH · 8 YRS · LEAD</div>
-        </div>
-        <div class="w-body" style="margin-top:14px;">Less than 1 in 8 applicants make it through trial day. The ones who do are the only people we send to your house.</div>
-      </div>
-
-      <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 5</span>
-        <div class="w-row w-row-2">
-          <div>
-            <div class="w-headline">Now that you know us — let's do the math.</div>
-            <div class="w-body">The quote form, finally. Three questions to start. Honest in under two minutes.</div>
-          </div>
-          <div class="w-img tall">CONVERSATIONAL QUOTE FORM · STEP 1/3</div>
-        </div>
-      </div>
-
       <div class="w-block w-dark">
-        <span class="scroll-marker">SCROLL · 6</span>
-        <div class="w-label">Reviews · Locations · Footer</div>
-        <div class="w-body">Real reviews surface as polaroids, not stars-and-quotes cards. Branch grid with photos of each location's actual building. Witty footer (404 link teases the easter egg).</div>
+        <span class="scroll-marker">SCROLL · 5 — The payoff</span>
+        <div class="w-label">Couch slides into the truck · doors close · CTA</div>
+        <div class="w-headline">That's the Smart Move. Now let's do yours.</div>
+        <div class="w-body">The journey's endpoint IS the conversion (Make Your Money Matter's lesson). Truck + quote invitation side by side. Mobile gets vignette mode (movers walk in per section, set couch down, quip — no pinning); reduced-motion gets static movers at each floor.</div>
       </div>
-
     </div>
   </div>
 
   <div class="steals">
-    <div class="label">Inspiration leaning</div>
-    <p>Heaviest debt to <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#shakeshack">Shake Shack</a> (origin story as centerpiece) and <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#dishoom">Dishoom</a> (narrative scroll, cinematic hero). Splashes of <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#wistia">Wistia</a> (video hero, eat your own cooking — Austin L makes the film) and <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#sweetgreen">Sweetgreen</a> (sourcing transparency = the crew page).</p>
+    <div class="label">Steer lineage</div>
+    <p>Every Last Drop's continuous scene (all 3 bullets ♥'d) + Scout Motors' pin-scrub-release + backward-walk comedy (all 3 ♥'d) + BreachBunny's drifting-companion idea Cameron explicitly connected to this. Quips = collectible beats, executed Einstein's way, not NASA's. Build path: GSAP ScrollTrigger + sprite sheets, ≤800KB, journey = decoration layer over real FSE blocks.</p>
   </div>
 
+  <div class="llm-row"><div class="label">LLM lens</div><p>Rule 10 is the whole architecture: every floor is a real HTML content block that reads perfectly with JS off; the movers are decoration. Hero stays static (Q1/Q7/Q9 answered before any animation); floors carry Q2/Q6/Q8; footer FAQ carries Q3/Q5.</p></div>
+  <div class="fdn-row"><div class="label">Quote-form foundation</div><p>The movers' illustration style must come FROM the Brand Kit world (real-photo site, illustrated accents — never clip-art). Quip bubbles use the form's orange-nudge idiom. The truck finale lands on the form's own booking invitation.</p></div>
+
   <div class="pvk">
-    <div class="pvk-cell preserve">
-      <h4>Preserve</h4>
-      <ul>
-        <li>Brand voice — already best-in-class</li>
-        <li>The 8,100 / 4.9★ / 55+ awards numbers (just relocate them)</li>
-        <li>The new quote form, repositioned post-scroll-4</li>
-        <li>Per-branch Google review counts (move into branch pages)</li>
-      </ul>
-    </div>
-    <div class="pvk-cell change">
-      <h4>Change</h4>
-      <ul>
-        <li>Hero from static "Let's Make Your Next Move Affordable" → 60-sec origin film</li>
-        <li>"6 Reasons" linear list → narrative chapters that earn the click</li>
-        <li>Generic stock photos → real archive shots of Cameron, Paul, the original truck</li>
-        <li>Quote-form placement: today it's the hero CTA, here it sits at scroll 5</li>
-      </ul>
-    </div>
-    <div class="pvk-cell kill">
-      <h4>Kill</h4>
-      <ul>
-        <li>Awards carousel (the numbers do the work, badges feel 2020)</li>
-        <li>Blog teaser block on homepage</li>
-        <li>"Core Purpose" generic mission card</li>
-        <li>The repeating final CTA bar</li>
-      </ul>
-    </div>
+    <div class="pvk-cell preserve"><h4>Preserve</h4><ul><li>All differentiator copy (each floor = one existing "reason")</li><li>Static hero answers + proof numbers</li><li>The quote form as the destination</li></ul></div>
+    <div class="pvk-cell change"><h4>Change</h4><ul><li>Page structure from stacked sections → one descending scene with landings</li><li>Differentiators from cards → floors with one argument each</li><li>Origin story → a framed photo in the lobby</li></ul></div>
+    <div class="pvk-cell kill"><h4>Kill</h4><ul><li>Everything v1 killed, plus any second journey on other pages — this trick plays ONCE, on the homepage</li></ul></div>
   </div>
 
   <div class="detail-grid">
-    <div class="detail scroll-moments">
-      <h3>Three scroll moments that carry the brand</h3>
-      <ul>
-        <li><strong>The opening line.</strong> "Two best friends. One truck." over the moving footage. If we get this right, the rest of the site is downhill.</li>
-        <li><strong>The crew faces.</strong> Showing tenure ("3 yrs, 5 yrs, 8 yrs") next to real movers' faces does what the 1% pass rate stat does for Honey Homes — except ours is human, not abstract.</li>
-        <li><strong>"Now that you know us, let's do the math."</strong> The CTA transition. The whole page is a slow earn — this is where it pays off.</li>
-      </ul>
-    </div>
-    <div class="detail risks">
-      <h3>Risks and trade-offs</h3>
-      <ul>
-        <li><strong>Conversion delay.</strong> Quote form lives at scroll 5, not scroll 0. High-intent visitors who already googled "movers austin" want the form now. Mitigation: sticky "Get Quote" in nav + sticky CTA bottom-right.</li>
-        <li><strong>Production cost.</strong> The 60-sec origin film is the load-bearing asset. If it's mediocre, the whole concept collapses. Need Austin L scoped time + script pass + outside DP for hero footage.</li>
-        <li><strong>Local SEO.</strong> A story-led homepage can dilute keyword weight unless branch pages pick up the slack. KP needs to scope city landing pages aggressively in parallel.</li>
-        <li><strong>Aging.</strong> Origin-story-first can feel dated after 2 years if it never evolves. Plan for an annual "next chapter" refresh built into the theme.</li>
-      </ul>
-    </div>
+    <div class="detail scroll-moments"><h3>Three moments that carry it</h3><ul>
+      <li><strong>The first descent.</strong> The instant the visitor realizes the movers move WITH the scroll — that's the share-this-site moment.</li>
+      <li><strong>Scroll-up comedy.</strong> Movers walking the couch backward upstairs. Free, honest, very Einstein.</li>
+      <li><strong>The truck doors closing on the CTA.</strong> The product demo and the conversion are the same pixel.</li></ul></div>
+    <div class="detail risks"><h3>Risks</h3><ul>
+      <li><strong>Production: the sprite rig.</strong> 2 movers + couch, ~5 poses — an illustrator brief in days, but the style MUST match the brand or it reads clip-art (the one failure mode).</li>
+      <li><strong>Scope discipline.</strong> 5–7 beats max. The Boat took a year at 222 illustrations; we are not doing that.</li>
+      <li><strong>KP build cost</strong> — Laura confirmed budget for custom interactive components; this is where it goes.</li></ul></div>
   </div>
 </section>
 
-<!-- ═════════════════════════════════════════════ -->
-<!-- CONCEPT 02 · PROOF WALL -->
-<!-- ═════════════════════════════════════════════ -->
-<section class="concept" id="c2">
-  <div class="concept-tag">CONCEPT 02</div>
-  <h2>The Proof Wall</h2>
-  <p class="thesis">Stop hiding the receipts. The hero IS the social proof — 8,100 reviews and 55 awards aren't a badge, they're the whole picture.</p>
+<!-- ═════════ V2 CONCEPT 03 · HOMETOWN PROOF ═════════ -->
+<section class="concept" id="v2c">
+  <div class="concept-tag">V2 · CONCEPT 03</div>
+  <h2>Hometown Proof</h2>
+  <p class="thesis">Liz's "those three had a baby": proof × local × story in one. The site knows your city, leads with the neighbors who vouch for us there, and the company story backs it up.</p>
 
   <div class="wire-shell">
-    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Proof Wall</span></div>
+    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Hometown Proof · (geo: Austin)</span></div>
     <div class="wire">
-
       <div class="w-nav">
         <span class="logo">EINSTEIN</span>
-        <span class="links"><span>Services</span><span>Locations</span><span>Reviews</span><span>About</span></span>
-        <span class="cta">Get Quote</span>
+        <span class="links"><span>Austin ▾</span><span>Services</span><span>Pricing</span><span>Reviews</span></span>
+        <span class="cta">Book Your Move</span>
       </div>
-
-      <div class="w-block w-hero w-orange">
-        <span class="scroll-marker">SCROLL · 0</span>
-        <div class="w-label">Hero — mosaic of real reviews</div>
-        <div class="w-row w-row-21" style="align-items:start;">
-          <div>
-            <div class="w-headline big">8,100+ reviews. 4.9 stars. 22 years. One reason.</div>
-            <div class="w-body">We hire like it matters, train like it matters, and pay like it matters — because it does. That's why people keep moving with us.</div>
-            <div class="w-button-row"><span class="w-btn">Get an honest quote →</span><span class="w-btn ghost">See the reviews</span></div>
-          </div>
-          <div class="w-img tall">LIVE REVIEW MOSAIC · 12 RECENT 5★ TILES · GOOGLE/YELP/FACEBOOK LOGOS</div>
-        </div>
-      </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 1</span>
-        <div class="w-label">The wall — every review, searchable</div>
-        <div class="w-row w-row-4">
-          <div class="w-img">REVIEW · 5★</div>
-          <div class="w-img">REVIEW · 5★</div>
-          <div class="w-img">REVIEW · 5★</div>
-          <div class="w-img">REVIEW · 5★</div>
-        </div>
-        <div class="w-body" style="margin-top:14px;">Filter by city, by mover name, by year. Search "couch" or "stairs" or "Marcus." The whole wall is here. Nothing curated.</div>
-      </div>
-
-      <div class="w-block w-dark">
-        <span class="scroll-marker">SCROLL · 2</span>
-        <div class="w-label">Award wall</div>
-        <div class="w-row w-row-4">
-          <div><div class="w-stat">7×</div><div class="w-stat-label">Inc. 5000</div></div>
-          <div><div class="w-stat">55+</div><div class="w-stat-label">Best Of Awards</div></div>
-          <div><div class="w-stat">10/10</div><div class="w-stat-label">Markets · Nextdoor Favorite</div></div>
-          <div><div class="w-stat">A+</div><div class="w-stat-label">BBB · all branches</div></div>
-        </div>
-        <div class="w-body" style="margin-top:14px;">Each tile expands. Tap "55+" to see them. Tap "Inc. 5000" to see what we did each year. Receipts on receipts.</div>
-      </div>
-
-      <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 3</span>
-        <div class="w-label">The "less than 1%" story</div>
-        <div class="w-row w-row-2">
-          <div class="w-img">MOVER TRAINING · INTERVIEW SCENE</div>
-          <div>
-            <div class="w-headline">Of every 100 movers who apply, 8 make the cut.</div>
-            <div class="w-body">Trial day, background check, drug screen, two interviews, a real customer ride-along. The reason 8,100+ reviews look like that is the 92 we said no to.</div>
-            <span class="w-btn">Meet the team →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 4</span>
-        <div class="w-label">Counter-objection block</div>
-        <div class="w-row w-row-3">
-          <div class="w-block">
-            <div class="w-label">"Am I going to get ripped off?"</div>
-            <div class="w-body">No. Here's the price sheet. Here's the math.</div>
-          </div>
-          <div class="w-block">
-            <div class="w-label">"Will they break my stuff?"</div>
-            <div class="w-body">Damages per move: $1.66/hour avg. Here's the claims process.</div>
-          </div>
-          <div class="w-block">
-            <div class="w-label">"Will they show up?"</div>
-            <div class="w-body">99.4% on-time arrival. We text 30 min before.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-block w-navy">
-        <span class="scroll-marker">SCROLL · 5</span>
-        <div class="w-label">Locations + quote form</div>
-        <div class="w-body">10-branch grid · quote form embedded inline, not buried · footer.</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="steals">
-    <div class="label">Inspiration leaning</div>
-    <p>Built on the spine of <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#honeyhomes">Honey Homes</a> (proof stacking above the fold + "1% pass rate" as a story). The objection-handling row owes <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#lemonade">Lemonade</a>'s transparency-as-trust principle. The award wall borrows <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#wgac">Who Gives A Crap</a>'s "make impact tangible, not badged" approach.</p>
-  </div>
-
-  <div class="pvk">
-    <div class="pvk-cell preserve">
-      <h4>Preserve</h4>
-      <ul>
-        <li>The Awards page (it's the best page on the site — promote it to the homepage spine)</li>
-        <li>Per-branch Google review counts</li>
-        <li>The new quote form — embedded at scroll 5</li>
-        <li>"Besides the fact that we're really, really ridiculously good-looking" voice</li>
-      </ul>
-    </div>
-    <div class="pvk-cell change">
-      <h4>Change</h4>
-      <ul>
-        <li>Hero from headline + form → headline + live review mosaic</li>
-        <li>Awards carousel → expandable award wall with actual receipts behind each badge</li>
-        <li>"6 Reasons" → 3-card objection-handler ("am I going to get ripped off?")</li>
-        <li>Stock hero imagery → live, filterable review feed</li>
-      </ul>
-    </div>
-    <div class="pvk-cell kill">
-      <h4>Kill</h4>
-      <ul>
-        <li>"How to Choose the Right Moving Company" YouTube embed on home (move to /resources)</li>
-        <li>Brand-story block on homepage (it's its own subpage in this concept — see Concept 01 if you want it home)</li>
-        <li>The repeating CTA bands</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="detail-grid">
-    <div class="detail scroll-moments">
-      <h3>Three scroll moments that carry the brand</h3>
-      <ul>
-        <li><strong>The mosaic.</strong> Twelve real reviews in the hero — auto-refreshing weekly. Visitors realize within 3 seconds they're looking at the whole iceberg, not the tip.</li>
-        <li><strong>"Of every 100 movers who apply, 8 make the cut."</strong> The hiring funnel as a number is the bridge between "look at the reviews" and "now you know why."</li>
-        <li><strong>The objection row.</strong> Naming customer fear in customer voice ("Am I going to get ripped off?") and answering in one line. This is the existing brand voice at its peak.</li>
-      </ul>
-    </div>
-    <div class="detail risks">
-      <h3>Risks and trade-offs</h3>
-      <ul>
-        <li><strong>Cold start.</strong> No story, no warmth on landing — it's facts-first. A skeptic loves it. A nervous first-time mover may find it transactional. Pair with strong photography in branch pages.</li>
-        <li><strong>Tech lift.</strong> Live filterable review wall needs an ingestion pipeline (Google + Yelp + Facebook APIs → WP custom post type or static-cached endpoint). KP needs a dev partner or Matisen's team owns the integration.</li>
-        <li><strong>Number maintenance.</strong> "8,100+ reviews · 4.9 stars" needs to be live or stale numbers will torch the credibility. Build a nightly fetch into the FSE theme.</li>
-        <li><strong>Doesn't differentiate on personality alone.</strong> Honey Homes/Lemonade/Oscar all do proof-first too. We win on receipts being deeper than theirs, not on the form itself.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════════════════════════════════════════ -->
-<!-- CONCEPT 03 · LOCAL-FIRST -->
-<!-- ═════════════════════════════════════════════ -->
-<section class="concept" id="c3">
-  <div class="concept-tag">CONCEPT 03</div>
-  <h2>Local-First</h2>
-  <p class="thesis">The homepage detects your city and shows you Austin's Einstein, not Einstein's Austin. Ten markets, ten personalities, one system.</p>
-
-  <div class="wire-shell">
-    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Local-First · (geo: Austin)</span></div>
-    <div class="wire">
-
-      <div class="w-nav">
-        <span class="logo">EINSTEIN</span>
-        <span class="links"><span>Austin ▾</span><span>Services</span><span>Reviews</span><span>About</span></span>
-        <span class="cta">Get Quote</span>
-      </div>
-
       <div class="w-block w-hero w-dark">
-        <span class="scroll-marker">SCROLL · 0</span>
-        <div class="w-label">Geo-aware hero — detects city, swappable</div>
+        <span class="scroll-marker">SCROLL · 0 — answers Q1/Q4/Q6/Q7</span>
+        <div class="w-label">Geo-aware hero — local promise over the crew reel</div>
         <div class="w-row w-row-2">
           <div>
             <span class="w-pill">YOU'RE IN AUSTIN</span><span class="w-pill">CHANGE CITY ▾</span>
-            <div class="w-headline big" style="margin-top:12px;">Austin's Smart Move.</div>
-            <div class="w-body">North Austin, South Austin, Leander — three crews, one company, 1,847 five-star reviews across town. Local owners. Local trucks. Local "we know the parking situation on Rainey Street."</div>
-            <div class="w-button-row"><span class="w-btn">Get my Austin quote →</span><span class="w-btn ghost">Meet the Austin crew</span></div>
+            <div class="w-headline big" style="margin-top:12px;">Austin's most-awarded movers. 9 years running.</div>
+            <div class="w-body">Local claim + the what/where sentence underneath ("Local moving across Texas + Tampa — this is our North Austin crew"). Graceful national fallback when geo is unknown.</div>
+            <div class="w-button-row"><span class="w-btn">See my Austin price →</span></div>
           </div>
-          <div class="w-img tall">AUSTIN-SPECIFIC HERO PHOTO · MOVERS ON SOUTH CONGRESS</div>
+          <div class="w-img video tall">CREW REEL · LOCAL FOOTAGE WHERE IT EXISTS</div>
         </div>
       </div>
-
       <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 1</span>
-        <div class="w-label">"Why Austinites pick Einstein"</div>
+        <span class="scroll-marker">SCROLL · 1 — answers Q2/Q6</span>
+        <div class="w-label">Neighbor wall — review excerpts as real text, filterable</div>
         <div class="w-row w-row-3">
-          <div>
-            <div class="w-stat">1,847</div><div class="w-stat-label">Austin 5★ reviews</div>
-          </div>
-          <div>
-            <div class="w-stat">3</div><div class="w-stat-label">Branches · NA, SA, Leander</div>
-          </div>
-          <div>
-            <div class="w-stat">9 yrs</div><div class="w-stat-label">Average tenure · Austin lead movers</div>
-          </div>
+          <div class="w-img">REVIEW · "billed exactly what I was quoted"</div>
+          <div class="w-img">REVIEW · "Corey and Christopher — 2hrs under estimate"</div>
+          <div class="w-img">REVIEW · "second move with Einstein"</div>
         </div>
+        <div class="w-body" style="margin-top:14px;">1,400+ Austin reviews (scope-labeled) of the 8,100+ total. Filter by city/service; hover-preview where video exists (we have some influencer footage — inventory TBD). Plain pricing sentence sits right under: hourly, everything included → /pricing.</div>
       </div>
-
       <div class="w-block">
         <span class="scroll-marker">SCROLL · 2</span>
-        <div class="w-label">Austin BM intro</div>
+        <div class="w-label">The vetting story — why the reviews look like that</div>
         <div class="w-row w-row-12">
-          <div class="w-img">CALVIN HUGHES · NA BM · PHOTO</div>
+          <div class="w-img">TRAINING / TRIAL DAY PHOTO</div>
           <div>
-            <div class="w-headline">"I've moved 12,000 people in this town. Yours is next."</div>
-            <div class="w-body">Calvin runs North Austin. He's been here 8 years. He knows which Mueller buildings have the freight elevator, which East Side condos still don't, and where parking on Rainey is going to ruin your day. Pick a date and he'll tell you what your move actually costs — not the rate, the cost.</div>
-            <span class="w-btn">Book with Calvin →</span>
+            <div class="w-headline">The reviews are the output. This is the input.</div>
+            <div class="w-body">Hiring funnel, training, W-2 crews, background checks — Honey Homes' "1% pass rate" play with our real numbers. Connects proof to people.</div>
           </div>
         </div>
       </div>
-
       <div class="w-block w-navy">
         <span class="scroll-marker">SCROLL · 3</span>
-        <div class="w-label">National proof — softer, framed as "and the company behind us"</div>
-        <div class="w-row w-row-4">
-          <div><div class="w-stat">8,100+</div><div class="w-stat-label">Reviews · all markets</div></div>
-          <div><div class="w-stat">10</div><div class="w-stat-label">Branches · TX + FL</div></div>
-          <div><div class="w-stat">22 yrs</div><div class="w-stat-label">In business</div></div>
-          <div><div class="w-stat">2 kids</div><div class="w-stat-label">From kindergarten · still running it</div></div>
-        </div>
+        <div class="w-label">Story band + the company behind the crews</div>
+        <div class="w-body">"Two kindergarten best friends started this with one truck. Now 10 branches keep it personal." National stats framed as "the company behind your local crew." Story present, never the lead.</div>
       </div>
-
       <div class="w-block w-orange">
         <span class="scroll-marker">SCROLL · 4</span>
-        <div class="w-label">Austin services + neighborhoods grid</div>
-        <div class="w-row w-row-3">
-          <div class="w-img">DOWNTOWN / RAINEY</div>
-          <div class="w-img">MUELLER / EAST</div>
-          <div class="w-img">SOUTH CONGRESS</div>
-        </div>
-        <div class="w-body" style="margin-top:14px;">Each tile opens a neighborhood-specific moving guide. Local quirks, parking tips, building rules.</div>
+        <div class="w-label">Neighborhood tiles + quote invitation + footer FAQ</div>
+        <div class="w-body">Mueller / East / South Congress tiles (the location-page template seeds live here). Austin-defaulted quote invitation. FAQ block closes.</div>
       </div>
-
-      <div class="w-block w-dark">
-        <span class="scroll-marker">SCROLL · 5</span>
-        <div class="w-label">Quote form (Austin-defaulted) + Austin reviews + footer</div>
-      </div>
-
     </div>
   </div>
 
   <div class="steals">
-    <div class="label">Inspiration leaning</div>
-    <p>Big bet on <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#dishoom">Dishoom</a> (each location is its own world) and <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#shakeshack">Shake Shack</a> (unified-but-flexible design system at scale). Calvin's "I've moved 12,000 people" moment owes <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#oscar">Oscar</a>'s partnership language and <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#sweetgreen">Sweetgreen</a>'s sourcing transparency, applied to crews instead of arugula.</p>
+    <div class="label">Steer lineage</div>
+    <p>Dishoom location-personality + Shake Shack's scalable system (both ♥'d) + Honey Homes vetting-as-story + Lemonade transparency-as-trust. This concept doubles as the LOCATION-PAGE template — Emma noted v1's Local-First "hits pretty good" as a city page; this is that, promoted and blended.</p>
   </div>
 
+  <div class="llm-row"><div class="label">LLM lens</div><p>Strong: geo entities, scope-labeled review counts, NAP-ready structure. One care point: geo-detection must never gate content — the national fallback page answers all 9 questions without knowing your city, and every city page exists at a real crawlable URL.</p></div>
+  <div class="fdn-row"><div class="label">Quote-form foundation</div><p>The geo pill = the form's chip idiom; "See my Austin price" = the form's conversational specificity; review cards inherit the form's trust-badge styling.</p></div>
+
   <div class="pvk">
-    <div class="pvk-cell preserve">
-      <h4>Preserve</h4>
-      <ul>
-        <li>The 10-branch URL structure (/locations/texas-movers/north-austin-movers/) — already SEO gold</li>
-        <li>Existing per-branch Google review counts</li>
-        <li>Quote form — geo-defaults the "where" field</li>
-        <li>Voice across all 10 markets stays one voice (the WP block library enforces it)</li>
-      </ul>
-    </div>
-    <div class="pvk-cell change">
-      <h4>Change</h4>
-      <ul>
-        <li>Homepage from one-size-fits-all → ten near-homepages, one block theme</li>
-        <li>BM is a name in a footer → BM is the hero on their market's homepage</li>
-        <li>"Locations" link in nav → defaults to user's city + dropdown to switch</li>
-        <li>National stats demoted; local stats promoted</li>
-      </ul>
-    </div>
-    <div class="pvk-cell kill">
-      <h4>Kill</h4>
-      <ul>
-        <li>The single national homepage (it becomes a /about-style fallback for visitors w/o geo)</li>
-        <li>Generic stock hero photos</li>
-        <li>"6 Reasons" — replaced by "Why Austinites pick Einstein" / "Why Tampa picks Einstein" / etc.</li>
-      </ul>
-    </div>
+    <div class="pvk-cell preserve"><h4>Preserve</h4><ul><li>The 10-branch URL structure (SEO gold)</li><li>Per-branch review counts + mover bios (the location pages' buried goldmine)</li><li>BM presence (lighter than v1's — a name + face, not the hero)</li></ul></div>
+    <div class="pvk-cell change"><h4>Change</h4><ul><li>Homepage from one-size → geo-aware with honest fallback</li><li>Reviews from carousel → filterable neighbor wall in real HTML</li><li>National stats demoted to "the company behind us"</li></ul></div>
+    <div class="pvk-cell kill"><h4>Kill</h4><ul><li>v1's BM-as-homepage-hero (turnover risk Cameron flagged stands)</li><li>Stock photography anywhere</li></ul></div>
   </div>
 
   <div class="detail-grid">
-    <div class="detail scroll-moments">
-      <h3>Three scroll moments that carry the brand</h3>
-      <ul>
-        <li><strong>"You're in Austin · change city ▾"</strong> The pill at the top of the hero is the whole concept in one widget. Tells the visitor instantly: this site knows where you are, and we run THIS place.</li>
-        <li><strong>"I've moved 12,000 people in this town. Yours is next."</strong> Calvin (or whichever BM) saying it. Makes the company human at the scale where humans actually live.</li>
-        <li><strong>The neighborhood tiles.</strong> Mueller / East / South Congress — proves we know the city, not just have an address in it. Same play in every market: Tampa gets Hyde Park / Seminole Heights / South Tampa, DFW gets Plano / Uptown / Bishop Arts.</li>
-      </ul>
-    </div>
-    <div class="detail risks">
-      <h3>Risks and trade-offs</h3>
-      <ul>
-        <li><strong>Content production multiplies by 10.</strong> Every block theme update needs ten copy passes, ten photo shoots, ten neighborhood guides. Without Austin L scaled up or a content ops hire, this rots.</li>
-        <li><strong>BM turnover.</strong> If Calvin is the hero of the Austin homepage and Calvin leaves, the page has to swap fast. Need a "BM-spotlight" block pattern that's truly modular.</li>
-        <li><strong>Geo-detection edge cases.</strong> Out-of-market visitors (a Dallas customer researching Tampa for a parent's move) need a clean "show me a different city" flow. Don't lock anyone in.</li>
-        <li><strong>SEO complexity.</strong> Ten near-homepages risks duplicate-content penalties unless schemas, canonicals, and local entities are scoped tight. KP needs to scope this carefully.</li>
-      </ul>
-    </div>
+    <div class="detail scroll-moments"><h3>Three moments that carry it</h3><ul>
+      <li><strong>"You're in Austin."</strong> The pill that proves the site knows where it is — and the whole concept in one widget.</li>
+      <li><strong>The neighbor wall.</strong> Real excerpts with real names and real streets — transparency as theater.</li>
+      <li><strong>"The reviews are the output. This is the input."</strong> The vetting reframe that makes 8,100+ reviews feel earned, not bought.</li></ul></div>
+    <div class="detail risks"><h3>Risks</h3><ul>
+      <li><strong>Content ops × 10 markets</strong> — same as v1's Local-First; mitigated by making this the location-page TEMPLATE first and the homepage default second.</li>
+      <li><strong>Geo edge cases</strong> — out-of-market researchers need a clean city switcher.</li>
+      <li><strong>Review-wall pipeline</strong> — needs the ingestion build (Matisen's team or KP dev).</li></ul></div>
   </div>
 </section>
 
-<!-- ═════════════════════════════════════════════ -->
-<!-- CONCEPT 04 · THE SMART MOVE SYSTEM -->
-<!-- ═════════════════════════════════════════════ -->
-<section class="concept" id="c4">
-  <div class="concept-tag">CONCEPT 04</div>
-  <h2>The Smart Move System</h2>
-  <p class="thesis">Treat the website like a product surface, not a brochure. The homepage demos the system that makes a move with us different.</p>
+<!-- ═════════ V2 CONCEPT 04 · THE WORKING QUOTE ═════════ -->
+<section class="concept" id="v2d">
+  <div class="concept-tag">V2 · CONCEPT 04</div>
+  <h2>The Working Quote</h2>
+  <p class="thesis">Mercury's move: show the product, not a metaphor. The hero IS the quote experience working — and the page walks chaos→order like Modern Treasury's diagram. The most product-forward of the four.</p>
 
   <div class="wire-shell">
-    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Smart Move System</span></div>
+    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Working Quote</span></div>
     <div class="wire">
-
       <div class="w-nav">
         <span class="logo">EINSTEIN</span>
-        <span class="links"><span>The System</span><span>Locations</span><span>Reviews</span><span>About</span></span>
-        <span class="cta">Start a Move</span>
+        <span class="links"><span>Services</span><span>Pricing</span><span>Locations</span><span>Reviews</span></span>
+        <span class="cta">Book Your Move</span>
       </div>
-
       <div class="w-block w-hero">
-        <span class="scroll-marker">SCROLL · 0</span>
-        <div class="w-label">Hero — system diagram with active state</div>
+        <span class="scroll-marker">SCROLL · 0 — answers Q1/Q2/Q9</span>
+        <div class="w-label">Hero — the quote experience, live, with realistic data</div>
         <div class="w-row w-row-2">
           <div>
-            <div class="w-headline big">The Smart Move System.</div>
-            <div class="w-body">An honest quote. The right crew. A price that doesn't move. A system instead of a guess. Five steps, three numbers, zero hidden fees.</div>
-            <div class="w-button-row"><span class="w-btn">Start a quote →</span><span class="w-btn ghost">How it works (90 sec)</span></div>
+            <div class="w-headline big">Your price in 47 seconds. The whole price.</div>
+            <div class="w-body">The actual quote-form UI (our best design asset) rendered in the hero with a realistic 2-bedroom example — steps, the honest line items, the final number. What/where sentence sits directly beneath for the crawlers and the skimmers.</div>
+            <div class="w-button-row"><span class="w-btn">Start mine →</span></div>
           </div>
-          <div class="w-img tall">5-NODE SYSTEM DIAGRAM · QUOTE → CREW → MOVE → PRICE → AFTER</div>
+          <div class="w-img tall">QUOTE FORM UI · STEP 5 ESTIMATE · REALISTIC DATA</div>
         </div>
       </div>
-
       <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 1</span>
-        <div class="w-label">Step 1 of 5 — The Quote</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">QUOTE-FORM SCREENSHOT · ANIMATED</div>
-          <div>
-            <div class="w-headline">No tiny math elves. No PhD required.</div>
-            <div class="w-body">We tell you what hours, materials, and travel are going to cost — before you book. The number on your quote is the number on your invoice.</div>
-            <div><span class="w-pill">Avg quote time: 4 min</span><span class="w-pill">98% quote-to-invoice match</span></div>
-          </div>
+        <span class="scroll-marker">SCROLL · 1 — answers Q6/Q8</span>
+        <div class="w-label">Chaos → order — the before/after diagram</div>
+        <div class="w-row w-row-2">
+          <div class="w-img">BEFORE · DIY/CHEAP MOVER · TANGLED ARROWS, SURPRISE FEES, "8AM–4PM?"</div>
+          <div class="w-img">AFTER · THE SMART MOVE SYSTEM · 5 CLEAN NUMBERED STEPS</div>
         </div>
+        <div class="w-body" style="margin-top:14px;">Modern Treasury's strongest pattern, drawn in Einstein's illustration style. The contrast does the selling; each "after" node links to its pillar.</div>
       </div>
-
       <div class="w-block">
         <span class="scroll-marker">SCROLL · 2</span>
-        <div class="w-label">Step 2 of 5 — The Crew</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">CREW PROFILE CARD MOCKUP</div>
-          <div>
-            <div class="w-headline">You'll know their names before they knock.</div>
-            <div class="w-body">Marcus (3 yrs) leads. Devon (5 yrs) handles fragile. Sarah (8 yrs) drives. Every crew goes through trial day, ride-along, two interviews. We hire 8 of every 100 who apply.</div>
-            <div><span class="w-pill">Avg lead tenure: 5.4 yrs</span><span class="w-pill">8% hire rate</span></div>
-          </div>
-        </div>
+        <div class="w-label">The receipt — line-item comparison promoted from the pricing page</div>
+        <div class="w-body">The pricing page's quote-vs-competitor table (the site's strongest persuasion content, currently trapped in a plain table) redesigned as a "receipt" component. "Their $170/hr is really $200+. Our $200 is $200."</div>
       </div>
-
       <div class="w-block w-navy">
         <span class="scroll-marker">SCROLL · 3</span>
-        <div class="w-label">Step 3 of 5 — The Move</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">LIVE TRACKING UI · SAMSARA / EMMA MOCKUP</div>
-          <div>
-            <div class="w-headline">We text 30 min before we arrive.</div>
-            <div class="w-body">You know where the truck is. You know who's on it. You know what's getting wrapped, what's getting carried, what's already on the truck. The crew sees the same job we promised in the quote.</div>
-            <div><span class="w-pill">99.4% on-time</span><span class="w-pill">Live SMS check-ins</span></div>
-          </div>
-        </div>
+        <div class="w-label">Proof band + crews + story line</div>
+        <div class="w-body">Trust band (the front-desk block, reused) + Meet Your Movers cards + one story line with the kindergarten photo. Wit in every microcopy seam.</div>
       </div>
-
       <div class="w-block w-orange">
         <span class="scroll-marker">SCROLL · 4</span>
-        <div class="w-label">Step 4 of 5 — The Price</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">PRICE-MATCH-AT-INVOICE COMPARISON</div>
-          <div>
-            <div class="w-headline">Quote $1,840. Invoice $1,840.</div>
-            <div class="w-body">If we go over the estimated hours, we eat the difference up to 10%. After that, we tell you in advance — never at the truck. The Smart Move System is a price guarantee, not a price tease.</div>
-          </div>
-        </div>
+        <div class="w-label">Quote invitation (it's been visible the whole time) + FAQ</div>
+        <div class="w-body">By now the visitor has SEEN the product work twice. The invitation just opens the real thing. FAQ block closes.</div>
       </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 5</span>
-        <div class="w-label">Step 5 of 5 — After</div>
-        <div class="w-row w-row-12">
-          <div class="w-img">CLAIMS FLOW + REVIEW PROMPT</div>
-          <div>
-            <div class="w-headline">If something breaks, here's exactly what happens.</div>
-            <div class="w-body">Our damages-per-hour average is $1.66. When something does happen, the claim process is on this page, before you ever need it. No phone tag.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-block w-dark">
-        <span class="scroll-marker">SCROLL · 6</span>
-        <div class="w-label">Proof bar · locations · footer</div>
-        <div class="w-body">National stats restated as "the system at scale." Branch grid. Footer.</div>
-      </div>
-
     </div>
   </div>
 
   <div class="steals">
-    <div class="label">Inspiration leaning</div>
-    <p>This is the <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#lemonade">Lemonade</a> playbook — productized service, system on display, transparent at every step. Plus <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#honeyhomes">Honey Homes</a>' narrative arc (Problem → Solution → Benefit → Proof → Guarantee) and <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#sweetgreen">Sweetgreen</a>'s editorial restraint. Voice is still <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#drsquatch">Squatch</a> — confident, irreverent, not corporate.</p>
+    <div class="label">Steer lineage</div>
+    <p>Mercury product-forward hero ("I like it a lot") + Modern Treasury before/after (Cameron: "strongest single pattern in the whole sweep") + Ramp's receipt-style transparency + the conversational-quoting note from Lemonade. The quote form isn't just the design foundation here — it's the protagonist.</p>
   </div>
 
+  <div class="llm-row"><div class="label">LLM lens</div><p>Care required: the hero shows the form as an IMAGE/static render with the answers in adjacent real text — never the live JS app as the hero (invisible to crawlers). Q2 gets answered in plain text right under the demo. Receipt table ships as a real HTML table.</p></div>
+  <div class="fdn-row"><div class="label">Quote-form foundation</div><p>Maximal by definition — the form's screens, badges, and voice ARE the homepage's visual system. The site doesn't echo the form; it showcases it.</p></div>
+
   <div class="pvk">
-    <div class="pvk-cell preserve">
-      <h4>Preserve</h4>
-      <ul>
-        <li>"The Smart Move" external positioning + "Smart Move System" naming</li>
-        <li>"Tiny math elves" / "No PhD required" lines, placed under the Quote step</li>
-        <li>The new quote form — but it's now Step 1, not a sidebar</li>
-        <li>Variable Pricing infrastructure (the system is the story)</li>
-      </ul>
-    </div>
-    <div class="pvk-cell change">
-      <h4>Change</h4>
-      <ul>
-        <li>Site IA from "Services / About / Locations" → "The System / Locations / Reviews"</li>
-        <li>"6 Reasons" → 5 system steps, each clickable to a deeper page</li>
-        <li>Hero from emotional → demonstrational (the diagram IS the hero)</li>
-        <li>Frame ourselves as a product company that does service, not a service company with a website</li>
-      </ul>
-    </div>
-    <div class="pvk-cell kill">
-      <h4>Kill</h4>
-      <ul>
-        <li>Generic "Why Choose Us" framing</li>
-        <li>The disconnected awards carousel (numbers attach to specific steps)</li>
-        <li>Brand-story block on the homepage (lives at /about — see Concept 01 if you want it home)</li>
-      </ul>
-    </div>
+    <div class="pvk-cell preserve"><h4>Preserve</h4><ul><li>The quote form untouched (showcased, not rebuilt)</li><li>"47 seconds" + "tiny math elves" copy</li><li>Pricing-page comparison content (promoted, redesigned)</li></ul></div>
+    <div class="pvk-cell change"><h4>Change</h4><ul><li>Hero from headline → product demo with realistic data</li><li>Why-us framing → chaos/order diagram</li><li>Comparison table → receipt component (reusable on Pricing)</li></ul></div>
+    <div class="pvk-cell kill"><h4>Kill</h4><ul><li>Abstract differentiator icon grids</li><li>Any hero metaphor photography (couples hugging boxes)</li></ul></div>
   </div>
 
   <div class="detail-grid">
-    <div class="detail scroll-moments">
-      <h3>Three scroll moments that carry the brand</h3>
-      <ul>
-        <li><strong>The hero diagram.</strong> Five nodes labeled Quote / Crew / Move / Price / After. Each lights up as you scroll past it. The whole page is a system tour.</li>
-        <li><strong>"Quote $1,840. Invoice $1,840."</strong> The Step 4 visual. A side-by-side that names the entire industry's worst behavior and shows we don't do it.</li>
-        <li><strong>"If something breaks, here's exactly what happens."</strong> The Step 5 reframe. We talk about claims before the customer worries about them. Trust at its bravest.</li>
-      </ul>
-    </div>
-    <div class="detail risks">
-      <h3>Risks and trade-offs</h3>
-      <ul>
-        <li><strong>Loses warmth.</strong> System-as-hero is intellectually compelling but emotionally cooler than Concept 01. Movers don't always shop with their head. Pair with strong photography to keep humans in the frame.</li>
-        <li><strong>The system has to actually work.</strong> Quote-to-invoice match, 99.4% on-time, $1.66/hr damages — every number on the homepage becomes a public commitment. Operations gets graded by the website.</li>
-        <li><strong>Trademark exposure.</strong> "Smart Move System" goes from internal phrase to homepage hero. Worth confirming TM filing status before launch.</li>
-        <li><strong>FSE complexity.</strong> A "step block with active-state animation tied to scroll" is the most custom-block-heavy of the five concepts. Higher KP build cost than the others.</li>
-      </ul>
-    </div>
+    <div class="detail scroll-moments"><h3>Three moments that carry it</h3><ul>
+      <li><strong>The estimate in the hero.</strong> A real number on first paint — the category's biggest fear answered before a single claim is made.</li>
+      <li><strong>Chaos → order.</strong> The one image that explains why a system beats a guess.</li>
+      <li><strong>The receipt.</strong> Their fees itemized vs. our zero — the hotel-resort-fee analogy as a component.</li></ul></div>
+    <div class="detail risks"><h3>Risks</h3><ul>
+      <li><strong>Emotionally coolest of the four</strong> — needs the crew/story band to keep humans in frame (v1's Smart Move System had the same risk).</li>
+      <li><strong>Numbers become public commitments</strong> — every stat on the page gets operationally graded.</li>
+      <li><strong>VP sensitivity:</strong> example pricing must respect the soft variable-pricing guardrails (weekday nudge, never surge framing).</li></ul></div>
   </div>
 </section>
 
-<!-- ═════════════════════════════════════════════ -->
-<!-- CONCEPT 05 · EDITORIAL HOSPITALITY -->
-<!-- ═════════════════════════════════════════════ -->
-<section class="concept" id="c5">
-  <div class="concept-tag">CONCEPT 05</div>
-  <h2>Editorial Hospitality</h2>
-  <p class="thesis">White-glove service from people in work boots. Read like a magazine, feel like a hotel, deliver like a moving company.</p>
-
-  <div class="wire-shell">
-    <div class="wire-chrome"><span class="wire-url">einsteinmoving.com</span><span>Homepage · Editorial Hospitality</span></div>
-    <div class="wire">
-
-      <div class="w-nav">
-        <span class="logo">EINSTEIN</span>
-        <span class="links"><span>Issue №08</span><span>Services</span><span>Cities</span><span>About</span></span>
-        <span class="cta">Begin a Move</span>
-      </div>
-
-      <div class="w-block w-hero">
-        <span class="scroll-marker">SCROLL · 0</span>
-        <div class="w-label">Editorial cover — single image, single line, all whitespace</div>
-        <div style="text-align:center; padding: 40px 20px;">
-          <div class="w-stat-label" style="margin-bottom:24px;">Issue №08 · Summer 2026 · Texas + Florida</div>
-          <div class="w-headline big" style="font-size:2.6rem; margin-bottom:18px;">Moving is awful. We've spent 22 years making sure ours isn't.</div>
-          <div class="w-body" style="max-width:560px; margin: 0 auto;">A field-tested system for the day everyone dreads. Run by two kindergarten best friends out of ten branches across the South.</div>
-          <div class="w-button-row" style="justify-content:center; margin-top:24px;"><span class="w-btn">Begin a move →</span></div>
-        </div>
-      </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 1</span>
-        <div class="w-label">"In this issue"</div>
-        <div class="w-row w-row-3">
-          <div>
-            <div class="w-stat-label">№01 · Field Notes</div>
-            <div class="w-headline" style="font-size:1.1rem; margin-top:6px;">The boxes you'll be glad you packed first.</div>
-          </div>
-          <div>
-            <div class="w-stat-label">№02 · The Crew</div>
-            <div class="w-headline" style="font-size:1.1rem; margin-top:6px;">Sarah's first ride-along, eight years later.</div>
-          </div>
-          <div>
-            <div class="w-stat-label">№03 · The Math</div>
-            <div class="w-headline" style="font-size:1.1rem; margin-top:6px;">How honest pricing actually works.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 2</span>
-        <div class="w-label">Feature photo — full-bleed, single image</div>
-        <div class="w-img tall">EDITORIAL HERO PHOTO · CREW WRAPPING A PIANO · BLACK + WHITE</div>
-        <div class="w-body" style="margin-top:16px; font-style:italic;">"You can't fake taking care of someone's stuff. You either do it or you don't."<br><span style="color:var(--text-4); font-style: normal; font-size: 0.75rem;">— Cameron Brown, Co-founder</span></div>
-      </div>
-
-      <div class="w-block">
-        <span class="scroll-marker">SCROLL · 3</span>
-        <div class="w-label">Long-form: the origin paragraph</div>
-        <div style="max-width: 620px;">
-          <div class="w-headline">Two kindergarten best friends. One truck. A lot of really, really ridiculously good-looking moves.</div>
-          <div class="w-body" style="margin-top:12px;">Cameron and Paul met in kindergarten in 2002. They started Einstein with one truck in 2004. Twenty-two years later they have seventy-five — and a 4.9-star average across nearly six thousand reviews to show for it. Here's how that happened.</div>
-          <span class="w-btn ghost" style="margin-top:14px; display:inline-block;">Read the long version →</span>
-        </div>
-      </div>
-
-      <div class="w-block w-dark">
-        <span class="scroll-marker">SCROLL · 4</span>
-        <div class="w-label">Numbers — typeset like a magazine masthead</div>
-        <div class="w-row w-row-4">
-          <div><div class="w-stat">22</div><div class="w-stat-label">Years in business</div></div>
-          <div><div class="w-stat">8,100+</div><div class="w-stat-label">5-star reviews</div></div>
-          <div><div class="w-stat">10</div><div class="w-stat-label">Branches · TX + FL</div></div>
-          <div><div class="w-stat">400+</div><div class="w-stat-label">Movers on payroll</div></div>
-        </div>
-      </div>
-
-      <div class="w-block w-navy">
-        <span class="scroll-marker">SCROLL · 5</span>
-        <div class="w-label">Cities directory — typeset like a contents page</div>
-        <div class="w-body">North Austin · South Austin · Leander · San Antonio · Houston · Dallas · Fort Worth · Garland · McKinney · Tampa. Each entry: city name, neighborhood callouts, one-line BM intro.</div>
-      </div>
-
-      <div class="w-block w-orange">
-        <span class="scroll-marker">SCROLL · 6</span>
-        <div class="w-label">The quote — handled as an invitation, not a form</div>
-        <div class="w-headline">Tell us about your move.</div>
-        <div class="w-body">Three questions to start. Honest in under two minutes. We text back within an hour, every hour we're open.</div>
-        <div class="w-button-row"><span class="w-btn">Begin →</span></div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="steals">
-    <div class="label">Inspiration leaning</div>
-    <p>Half <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#sweetgreen">Sweetgreen</a> (custom typography, generous whitespace, the site is 70% air) and half <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#oscar">Oscar Health</a> (serif typography for warmth, partnership language, "imperfect" attribute). The "Issue №08" framing is straight <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#dishoom">Dishoom</a>. The bravery of leading with "Moving is awful" is <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html#tushy">TUSHY</a> at its most confident.</p>
-  </div>
-
-  <div class="pvk">
-    <div class="pvk-cell preserve">
-      <h4>Preserve</h4>
-      <ul>
-        <li>The brand voice — this concept lets it stretch furthest</li>
-        <li>8,100+ / 4.9★ / 55+ awards — repositioned as masthead-style numbers</li>
-        <li>The quote form, treated as an invitation at scroll 6</li>
-        <li>All 10 branches — typeset as a magazine contents directory</li>
-      </ul>
-    </div>
-    <div class="pvk-cell change">
-      <h4>Change</h4>
-      <ul>
-        <li>Visual density — go from cluttered to magazine-spaced</li>
-        <li>Photography from stock to commissioned editorial (black + white moments work hard)</li>
-        <li>Typography to custom or carefully paired (a serif headline + clean sans is the whole game)</li>
-        <li>CTA tone from "Get a Quote" → "Begin a Move"</li>
-      </ul>
-    </div>
-    <div class="pvk-cell kill">
-      <h4>Kill</h4>
-      <ul>
-        <li>Awards carousel</li>
-        <li>"6 Reasons" linear list</li>
-        <li>Repeating bottom-of-page CTA bar</li>
-        <li>The blog teaser on home (becomes the "In This Issue" block)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="detail-grid">
-    <div class="detail scroll-moments">
-      <h3>Three scroll moments that carry the brand</h3>
-      <ul>
-        <li><strong>"Moving is awful. We've spent 22 years making sure ours isn't."</strong> The cover line. Names the customer's actual feeling before pitching anything. Earns the rest of the scroll.</li>
-        <li><strong>The piano photo.</strong> One full-bleed editorial image where a crew is wrapping something precious. Anchors the whole hospitality thesis in three seconds.</li>
-        <li><strong>The cities contents page.</strong> Setting up the branch directory like a magazine TOC reframes 10 locations as a publication's footprint, not a service-area map.</li>
-      </ul>
-    </div>
-    <div class="detail risks">
-      <h3>Risks and trade-offs</h3>
-      <ul>
-        <li><strong>Conversion-rate skeptic's worst nightmare.</strong> Whitespace and editorial framing test poorly against high-intent paid-search traffic that wants a form, fast. Mitigation: paid-search lands on /get-quote/ directly, this concept is the brand-organic landing.</li>
-        <li><strong>Photography budget is real.</strong> The whole concept fails on stock imagery. Need a commissioned shoot in at least 3 cities (Austin, Tampa, Dallas) before launch. Austin L can produce, but not solo.</li>
-        <li><strong>Typography licensing.</strong> A custom or paid serif/sans pairing is part of the differentiation. Adobe Fonts license can carry it, but lock the choice early — changing fonts post-build is painful.</li>
-        <li><strong>Reads "premium."</strong> Could nudge perception toward higher-priced. That may help our positioning ("white-glove from work boots") and may hurt the bargain shopper. Test against branch-level conversion before scaling everywhere.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────────────────────────────────────── -->
-<!-- DECK LINK -->
-<!-- ─────────────────────────────────────────── -->
 <section class="deck-link">
-  <p>Sister doc · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/">Brand-story deck</a> · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html">Research deep-dive</a></p>
-  <p style="margin-top:12px; color: var(--text-4);">Prepared by Albert · May 2026 · Einstein Moving Company</p>
+  <p><a href="v1.html">v1 (May 2026) — the five original concepts →</a> · <a href="https://einsteinadmin.github.io/einstein-brand-story-172a11390747/research.html">Inspiration board + Cameron's Steer</a></p>
+  <p style="margin-top:12px; color: var(--text-4);">Prepared by Albert · June 11, 2026 · Einstein Moving Company · React with ♥ + notes, then Export decisions (bottom right)</p>
 </section>
-
 
 <script>
 (function () {
-  var KEY = 'einstein-mockup-reactions-v1';
+  var KEY = 'einstein-mockup-reactions-v2';
   var state = { blocks: {}, conceptNotes: {}, hidden: [] };
   try {
     var l = JSON.parse(localStorage.getItem(KEY) || '{}');
@@ -1586,6 +1190,5 @@
   render();
 })();
 </script>
-
 </body>
 </html>
