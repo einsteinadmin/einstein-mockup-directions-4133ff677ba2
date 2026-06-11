@@ -644,6 +644,10 @@
   <a class="tab active" href="#">V1 · MAY 2026 (SUPERSEDED)</a>
 </div>
 
+<div class="foundation-banner">
+  <div class="inner" style="border-color:rgba(255,138,122,0.4);background:rgba(255,138,122,0.05);"><b style="color:#ff8a7a;">SUPERSEDED BY V2 — salvage logged.</b> Cameron's 6/11 reactions are baked in below; everything ♥'d here grafts into the v2 finalists (sandbox About band, math elves, crew chapter, award wall, &lt;1% story, counter-objections, geo hero, neighborhood grid, the Editorial cover line).</div>
+</div>
+
 <!-- ─────────────────────────────────────────── -->
 <!-- INTRO -->
 <!-- ─────────────────────────────────────────── -->
@@ -1442,6 +1446,10 @@
       if (Array.isArray(l.hidden)) state.hidden = l.hidden;
     }
   } catch (e) {}
+  // Cameron's 6/11 reactions = default state for fresh browsers
+  var CAM = {"blocks": {"c1::2": {"liked": true, "note": "I like this \"a long time ago in a sandbox not so far away...\" bit for our about us section on the home page.", "label": "Chapter 01 — \"The Kindergarten Part\""}, "c1::3": {"liked": true, "note": "Love this part.", "label": "Chapter 02 — \"The Tiny Math Elves\""}, "c1::4": {"liked": true, "note": "", "label": "Chapter 03 — Crew (the people pages)"}, "c1::5": {"liked": true, "note": "", "label": "Now that you know us — let's do the math."}, "c2::2": {"liked": true, "note": "I like a good award wall.", "label": "Award wall"}, "c2::3": {"liked": true, "note": "I like this verbiage. It's less than 1 out of 100 though.", "label": "The \"less than 1%\" story"}, "c2::4": {"liked": true, "note": "", "label": "Counter-objection block"}, "c3::0": {"liked": true, "note": "", "label": "Geo-aware hero — detects city, swappable"}, "c3::2": {"liked": true, "note": "Love this one! But we have three different BMs in Austin depending on the area. Not sure if we can get this granular.", "label": "Austin BM intro"}, "c3::3": {"liked": true, "note": "Not sure about this one.", "label": "National proof — softer"}, "c3::4": {"liked": true, "note": "", "label": "Austin services + neighborhoods grid"}, "c5::0": {"liked": true, "note": "Not bad.", "label": "Editorial cover — single image, single line, all whitespace"}, "c5::3": {"liked": true, "note": "I like this verbiage too.", "label": "Long-form: the origin paragraph"}}, "conceptNotes": {"c1": "Cameron (6/11): I don't think our backstory should be the headline. Risks are high and the origin film hasn't been created yet (now on Austin L's list — pulse posted).", "c2": "Cameron (6/11): Not my favorite choice but has some strong elements. Just doesn't feel on brand.", "c3": "Cameron (6/11): This can inform our location page template, not the home page.", "c4": "Cameron (6/11): Feels a bit off brand but we need to be able to combine this one with the other more on-brand versions.", "c5": "Cameron (6/11): Not going to use this concept but like some elements."}, "hidden": []};
+  if (!localStorage.getItem(KEY)) { state = JSON.parse(JSON.stringify(CAM)); save(); }
+
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
 
   var concepts = Array.prototype.slice.call(document.querySelectorAll('section.concept'));
